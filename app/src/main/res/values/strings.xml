@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">New</string>
+    
+    <string-array name="category">
+        <item>Eylence</item>
+        <item>Cafe</item>
+        <item>Restaurant</item>
+    </string-array>
+
+    <string-array name="altcategory">
+        <item>Bowling</item>
+        <item>Tennis</item>
+    </string-array>
+</resources>
