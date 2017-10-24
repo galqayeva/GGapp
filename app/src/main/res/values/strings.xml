@@ -7,8 +7,27 @@
         <item>Restaurant</item>
     </string-array>
 
-    <string-array name="altcategory">
+    <string-array name="altcategoryA">
+        <item>Aaa</item>
         <item>Bowling</item>
         <item>Tennis</item>
     </string-array>
+
+    <string-array name="altcategoryB">
+        <item>Bbbb</item>
+        <item>Bowling</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="altcategoryC">
+        <item>Daa</item>
+        <item>Bowling</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="altcategoryD">
+        <item>Bowling</item>
+        <item>Tennis</item>
+    </string-array>
+
 </resources>
