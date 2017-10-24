@@ -33,23 +33,31 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+                adapter2=ArrayAdapter.createFromResource(MainActivity.this,R.array.altcategoryB,android.R.layout.simple_spinner_dropdown_item);
+                btn.setText("bb");
+                spinner2.setAdapter(adapter2);
+
                 Toast.makeText(MainActivity.this, spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                 if(spinner.getSelectedItem().toString()=="Eylence"){
                     adapter2=ArrayAdapter.createFromResource(MainActivity.this,R.array.altcategoryA,android.R.layout.simple_spinner_dropdown_item);
                     btn.setText("aaa");
+                    spinner2.setAdapter(adapter2);
 
                 }
                 if(spinner.getSelectedItem().toString()=="Cafe")
                 {
                     adapter2=ArrayAdapter.createFromResource(MainActivity.this,R.array.altcategoryB,android.R.layout.simple_spinner_dropdown_item);
                     btn.setText("bb");
+                    spinner2.setAdapter(adapter2);
                 }
                 if(spinner.getSelectedItem().toString()=="Restaurant"){
                     adapter2=ArrayAdapter.createFromResource(MainActivity.this,R.array.altcategoryC,android.R.layout.simple_spinner_dropdown_item);
                     btn.setText("ca");
+                    spinner2.setAdapter(adapter2);
                 }
 
-                spinner2.setAdapter(adapter2);
 
             }
 
