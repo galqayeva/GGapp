@@ -12,6 +12,11 @@ public class Category {
     private int jewelleryM,otherM;
     private int startDate;
 
+    public Category(String birthdayText, String otherText) {
+        this.birthdayText = birthdayText;
+        this.otherText = otherText;
+    }
+
     public int getStartDate() {
         return startDate;
     }

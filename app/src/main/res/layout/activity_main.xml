@@ -58,4 +58,19 @@ tools:context="g.y.v.anew.MainActivity"
         android:text="Last month Spending 453$"
         android:textSize="15dp"
         android:textColor="@color/white"/>
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp">
+        </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>
