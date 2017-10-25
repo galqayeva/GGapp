@@ -1,15 +1,25 @@
 package g.y.v.anew.Models;
 
 /**
- * Created by telim2 on 25.10.2017.
+ * Created by galqayeva on 25.10.2017.
  */
 
 public class Category {
 
     private String clothesText,cosmeticsText,entertainText,medicineText,restauranText,birthdayText,marketText,transportText;
-    private String tecnhologyText,jewelleryText,otherText;
+    private String jewelleryText,otherText;
     private int clothesM,cosmeticsM,entertainM,medicineM,restauranM,birthdayM,marketTextM,transportTextM;
-    private int tecnhologyM,jewelleryM,otherM;
+    private int jewelleryM,otherM;
+    private int startDate;
+
+    public int getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(int startDate) {
+        this.startDate = startDate;
+    }
+
 
     public String getClothesText() {
         return clothesText;
@@ -73,14 +83,6 @@ public class Category {
 
     public void setTransportText(String transportText) {
         this.transportText = transportText;
-    }
-
-    public String getTecnhologyText() {
-        return tecnhologyText;
-    }
-
-    public void setTecnhologyText(String tecnhologyText) {
-        this.tecnhologyText = tecnhologyText;
     }
 
     public String getJewelleryText() {
@@ -163,13 +165,7 @@ public class Category {
         this.transportTextM = transportTextM;
     }
 
-    public int getTecnhologyM() {
-        return tecnhologyM;
-    }
 
-    public void setTecnhologyM(int tecnhologyM) {
-        this.tecnhologyM = tecnhologyM;
-    }
 
     public int getJewelleryM() {
         return jewelleryM;
