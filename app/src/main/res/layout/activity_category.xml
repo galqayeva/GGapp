@@ -164,59 +164,58 @@
             android:layout_marginTop="6dp"/>
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/etCos"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"
             android:layout_marginTop="6dp"
-            />
-
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
+            android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/etRes"
             android:layout_width="50dp"
             android:layout_height="40dp"
+            android:layout_marginTop="6dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
+            android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/etBirth"
             android:layout_width="50dp"
             android:layout_height="40dp"
+            android:layout_marginTop="6dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
+            android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/etJew"
             android:layout_width="50dp"
             android:layout_height="40dp"
+            android:layout_marginTop="6dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/etMed"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/etMar"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/etOther"
@@ -333,6 +332,18 @@
             android:layout_marginTop="6dp"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/twAdd"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Add"
+        android:background="@color/colorPrimary"/>
 
 
 </RelativeLayout>

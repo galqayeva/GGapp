@@ -51,16 +51,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 " DATE INTEGER," +
-                COL3+" TEXT,"+COL4+"INTEGER,"+
-                COL5+" TEXT,"+COL6+"INTEGER,"+
-                COL7+" TEXT,"+COL8+"INTEGER,"+
-                COL9+" TEXT,"+COL10+"INTEGER,"+
-                COL11+" TEXT,"+COL12+"INTEGER,"+
-                COL13+" TEXT,"+COL14+"INTEGER,"+
-                COL15+" TEXT,"+COL16+"INTEGER,"+
-                COL17+" TEXT,"+COL18+"INTEGER,"+
-                COL19+" TEXT,"+COL20+"INTEGER,"+
-                COL21+" TEXT,"+COL22+"INTEGER)";
+                COL3+"TEXT,"+COL5+"TEXT,"+COL9+"TEXT,"+COL7+"TEXT,"+COL11+"TEXT,"+COL13+"TEXT,"+
+                COL15+"TEXT,"+COL17+"TEXT,"+COL19+"TEXT,"+COL21+"TEXT,"+
+                COL4+"INTEGER,"+COL6+"INTEGER,"+COL10+"INTEGER,"+COL8+"INTEGER,"+COL12+"INTEGER,"+
+                COL14+"INTEGER,"+COL16+"INTEGER,"+COL18+"INTEGER,"+COL20+"INTEGER,"+COL22+"INTEGER)";
         db.execSQL(createTable);
     }
 
