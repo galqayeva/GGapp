@@ -7,35 +7,25 @@ package g.y.v.anew.Other;
 
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.provider.Settings;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import g.y.v.anew.Models.Category;
+import g.y.v.anew.Models.CategoryModel;
 import g.y.v.anew.R;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static android.content.Context.MODE_PRIVATE;
-
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    private List<Category> modelList;
+    private List<CategoryModel> modelList;
     private Context context;
 
 
-    public MyAdapter(List<Category> modelList, Context context) {
+    public MyAdapter(List<CategoryModel> modelList, Context context) {
         this.modelList=modelList;
         this.context = context;
     }
@@ -51,7 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final Category model=modelList.get(position);
+        final CategoryModel model=modelList.get(position);
 
         holder.date.setText(model.getOtherText());
         holder.category.setText(model.getBirthdayText());

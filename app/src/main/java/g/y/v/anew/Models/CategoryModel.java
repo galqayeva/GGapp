@@ -4,7 +4,7 @@ package g.y.v.anew.Models;
  * Created by galqayeva on 25.10.2017.
  */
 
-public class Category {
+public class CategoryModel {
 
     private String clothesText,cosmeticsText,entertainText,medicineText,restauranText,birthdayText,marketText,transportText;
     private String jewelleryText,otherText;
@@ -12,7 +12,7 @@ public class Category {
     private int jewelleryM,otherM;
     private int startDate;
 
-    public Category(String birthdayText, String otherText) {
+    public CategoryModel(String birthdayText, String otherText) {
         this.birthdayText = birthdayText;
         this.otherText = otherText;
     }
