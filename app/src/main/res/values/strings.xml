@@ -2,4 +2,21 @@
     <string name="app_name">Your Budget Planner</string>
 
 
+    <string name="addSpending">Add Your Spendings on</string>
+    <string name="clothes">Clothes</string>
+    <string name="cosmetics">Cosmetics</string>
+    <string name="entertain">Entertainment</string>
+    <string name="medicine">Medicine</string>
+    <string name="restauran">Restaurants</string>
+    <string name="birthday">BirthdayGifts</string>
+    <string name="market">Market </string>
+    <string name="transport">Transportation</string>
+    <string name="jewellery">Jewellery</string>
+    <string name="other">Other</string>
+    <string name="note">Your Note</string>
+
+
+
+
+
 </resources>
