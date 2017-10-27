@@ -53,23 +53,20 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                boolean insertData = myDB.addData(Integer.parseInt("121212"),
+                        etTClo.getText().toString(),Integer.parseInt(etClo.getText().toString()),
+                        etTCos.getText().toString(),Integer.parseInt(etCos.getText().toString()),
+                        etTMed.getText().toString(),Integer.parseInt(etMed.getText().toString()),
+                        etTEnt.getText().toString(),Integer.parseInt(etEnt.getText().toString()),
+                        etTRes.getText().toString(),Integer.parseInt(etRes.getText().toString()),
+                        etTBir.getText().toString(),Integer.parseInt(etBir.getText().toString()),
+                        etTMar.getText().toString(),Integer.parseInt(etMar.getText().toString()),
+                        etTtra.getText().toString(),Integer.parseInt(etTra.getText().toString()),
+                        etTJew.getText().toString(),Integer.parseInt(etJew.getText().toString()),
+                        etTOth.getText().toString(),Integer.parseInt(etOth.getText().toString())
 
-//                boolean insertData = myDB.addData(
-//                        etTClo.getText().toString(),etTCos.getText().toString(),
-//                        etTEnt.getText().toString(),etTMed.getText().toString(),
-//                        etTRes.getText().toString(),etTBir.getText().toString(),
-//                        etTMar.getText().toString(), etTtra.getText().toString(),
-//                        etTJew.getText().toString(),etTOth.getText().toString(),
-//                        Integer.parseInt(etClo.getText().toString()),Integer.parseInt(etCos.getText().toString()),
-//                        Integer.parseInt(etEnt.getText().toString()), Integer.parseInt(etMed.getText().toString()),
-//                        Integer.parseInt(etRes.getText().toString()),Integer.parseInt(etBir.getText().toString()),
-//                        Integer.parseInt(etMar.getText().toString()),Integer.parseInt(etTra.getText().toString()),
-//                        Integer.parseInt(etJew.getText().toString()),Integer.parseInt(etOth.getText().toString()),
-//                        Integer.parseInt("121212")
-//                        );
 
-                boolean insertData = myDB.addData(1,"a",1,"a",1,"a",1,"a",1,"a",1,"a",1,"a",1,"a",1,"a",1,"a",1);
-
+                );
                 if(!insertData==true)
                     Log.d("something","getwrong");
             }
