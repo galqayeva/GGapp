@@ -1,6 +1,9 @@
 package g.y.v.anew;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import g.y.v.anew.Other.DatabaseHelper;
 
@@ -54,28 +59,56 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                boolean insertData = myDB.addData(Integer.parseInt("121212"),
-                        etTClo.getText().toString(),Integer.parseInt(etClo.getText().toString()),
-                        etTCos.getText().toString(),Integer.parseInt(etCos.getText().toString()),
-                        etTMed.getText().toString(),Integer.parseInt(etMed.getText().toString()),
-                        etTEnt.getText().toString(),Integer.parseInt(etEnt.getText().toString()),
-                        etTRes.getText().toString(),Integer.parseInt(etRes.getText().toString()),
-                        etTBir.getText().toString(),Integer.parseInt(etBir.getText().toString()),
-                        etTMar.getText().toString(),Integer.parseInt(etMar.getText().toString()),
-                        etTtra.getText().toString(),Integer.parseInt(etTra.getText().toString()),
-                        etTJew.getText().toString(),Integer.parseInt(etJew.getText().toString()),
-                        etTOth.getText().toString(),Integer.parseInt(etOth.getText().toString())
+                Calendar c = Calendar.getInstance();
+
+                String sDate = c.get(Calendar.YEAR) + "-"
+                        + c.get(Calendar.MONTH)
+                        + "-" + c.get(Calendar.DAY_OF_MONTH);
+
+                boolean insertData = myDB.addData(sDate,
+                        etTClo.getText().toString(),integerParse(etClo.getText().toString()),
+                        etTCos.getText().toString(),integerParse(etCos.getText().toString()),
+                        etTMed.getText().toString(),integerParse(etMed.getText().toString()),
+                        etTEnt.getText().toString(),integerParse(etEnt.getText().toString()),
+                        etTRes.getText().toString(),integerParse(etRes.getText().toString()),
+                        etTBir.getText().toString(),integerParse(etBir.getText().toString()),
+                        etTMar.getText().toString(),integerParse(etMar.getText().toString()),
+                        etTtra.getText().toString(),integerParse(etTra.getText().toString()),
+                        etTJew.getText().toString(),integerParse(etJew.getText().toString()),
+                        etTOth.getText().toString(),integerParse(etOth.getText().toString())
 
                 );
                 if(!insertData==true)
                     Log.d("something","getwrong");
 
 
+
+                AlertDialog alertDialog = new AlertDialog.Builder(CategoryActivity.this).create();
+                alertDialog.setTitle("Congrulations");
+                alertDialog.setMessage("Your record is added");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                Intent intent=new Intent(CategoryActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                alertDialog.show();
+
             }
         });
 
 
 
+    }
+    public  int integerParse(String k) {
+
+        int a = 0;
+        if (k == "") {
+            a = 0;
+        }
+        return a;
     }
 
     public  void demo(){

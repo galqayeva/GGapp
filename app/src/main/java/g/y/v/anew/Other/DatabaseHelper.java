@@ -50,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " DATE INTEGER, " +
+                " DATE TEXT, " +
                 COL3+" TEXT, "+COL4+" INTEGER, "+COL5+" TEXT, "+COL6+" INTEGER, "+COL7+" TEXT, "+COL8+" INTEGER, "+
                 COL9+" TEXT, "+COL10+" INTEGER, "+COL11+" TEXT, "+COL12+" INTEGER, "+COL13+" TEXT, "+COL14+" INTEGER, "+
                 COL15+" TEXT, "+COL16+" INTEGER, "+COL17+" TEXT, "+COL18+" INTEGER, "+COL19+" TEXT, "+COL20+" INTEGER, "+
@@ -65,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean addData(int date,String clothesText,int clothesM,String cosmeticsText,int cosmeticsM,String medicineText,
+    public boolean addData(String  date,String clothesText,int clothesM,String cosmeticsText,int cosmeticsM,String medicineText,
                            int medicineM,String entertainText,int entertainM,String restauranText,int restauranM, String birthdayText,
                            int birthdayM, String marketText,int marketTextM,String transportText,int transportTextM,String jewelleryText,
                            int jewelleryM,String otherText, int otherM)

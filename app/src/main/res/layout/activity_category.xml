@@ -13,7 +13,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:text="@string/addSpending"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twCloth"
@@ -22,7 +23,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
         android:text="@string/clothes"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twTransport"
@@ -33,7 +35,8 @@
         android:layout_below="@+id/twCloth"
         android:layout_marginTop="20dp"
         android:text="Transport"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twEntert"
@@ -44,7 +47,8 @@
         android:layout_below="@+id/twTransport"
         android:layout_marginTop="20dp"
         android:text="@string/entertain"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twCosmet"
@@ -55,7 +59,8 @@
         android:layout_below="@+id/twEntert"
         android:layout_alignLeft="@+id/twEntert"
         android:layout_alignStart="@+id/twEntert"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twRest"
@@ -66,7 +71,8 @@
         android:layout_below="@+id/twCosmet"
         android:layout_alignLeft="@+id/twCosmet"
         android:layout_alignStart="@+id/twCosmet"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twBirth"
@@ -77,7 +83,8 @@
         android:layout_below="@+id/twRest"
         android:layout_marginTop="20dp"
         android:text="@string/birthday"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twJewellery"
@@ -88,7 +95,8 @@
         android:layout_below="@+id/twBirth"
         android:layout_marginTop="20dp"
         android:text="@string/jewellery"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twMedicine"
@@ -99,7 +107,8 @@
         android:layout_below="@+id/twJewellery"
         android:layout_marginTop="20dp"
         android:text="@string/medicine"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twMarket"
@@ -112,7 +121,8 @@
         android:layout_alignEnd="@+id/twEntert"
         android:layout_alignLeft="@+id/twMedicine"
         android:layout_alignStart="@+id/twMedicine"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twOther"
@@ -125,7 +135,8 @@
         android:layout_alignStart="@+id/twMarket"
         android:layout_alignRight="@+id/twCloth"
         android:layout_alignEnd="@+id/twCloth"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -335,14 +346,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_alignBottom="@+id/twAdd"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:text="Add"
+        android:text="add"
         android:background="@color/colorPrimary"/>
 
 
