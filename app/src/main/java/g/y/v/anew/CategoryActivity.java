@@ -1,5 +1,6 @@
 package g.y.v.anew;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,12 +66,27 @@ public class CategoryActivity extends AppCompatActivity {
                         etTJew.getText().toString(),Integer.parseInt(etJew.getText().toString()),
                         etTOth.getText().toString(),Integer.parseInt(etOth.getText().toString())
 
-
                 );
                 if(!insertData==true)
                     Log.d("something","getwrong");
+
+                Cursor data = myDB.getAlldata();
+
+                String gunay="********";
+                if(data.getCount() != 0)
+                {
+                    Log.d("Gunay","----------"+data.getCount());
+                    while(data.moveToNext())
+                    {
+                        gunay=gunay+data.getString(0)+"-----"+data.getString(10)+"-----"+data.getString(11)+"-----"+data.getString(12);
+                    }
+                    Log.d("Gunay",gunay+data.getCount());
+
+                }
             }
         });
+
+
 
 
     }
