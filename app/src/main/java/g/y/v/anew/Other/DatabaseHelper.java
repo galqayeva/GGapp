@@ -13,8 +13,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "BP.db";
-    public static final String TABLE_NAME = "bmm";
+    public static final String DATABASE_NAME = "asd.db";
+    public static final String TABLE_NAME = "asd";
 
     public static final String COL1 = "ID";
     public static final String COL2="date";
@@ -50,11 +50,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " DATE INTEGER," +
-                COL3+"TEXT,"+COL5+"TEXT,"+COL9+"TEXT,"+COL7+"TEXT,"+COL11+"TEXT,"+COL13+"TEXT,"+
-                COL15+"TEXT,"+COL17+"TEXT,"+COL19+"TEXT,"+COL21+"TEXT,"+
-                COL4+"INTEGER,"+COL6+"INTEGER,"+COL10+"INTEGER,"+COL8+"INTEGER,"+COL12+"INTEGER,"+
-                COL14+"INTEGER,"+COL16+"INTEGER,"+COL18+"INTEGER,"+COL20+"INTEGER,"+COL22+"INTEGER)";
+                " DATE INTEGER, " +
+                COL3+" TEXT, "+COL5+" TEXT, "+COL9+" TEXT, "+COL7+" TEXT, "+COL11+" TEXT, "+COL13+" TEXT, "+
+                COL15+" TEXT, "+COL17+" TEXT, "+COL19+" TEXT, "+COL21+" TEXT, "+
+                COL4+" INTEGER, "+COL6+" INTEGER, "+COL10+" INTEGER, "+COL8+" INTEGER, "+COL12+" INTEGER, "+
+                COL14+" INTEGER, "+COL16+" INTEGER, "+COL18+" INTEGER, "+COL20+" INTEGER, "+COL22+" INTEGER)";
         db.execSQL(createTable);
     }
 
@@ -64,13 +64,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean addData(String clothesText,String cosmeticsText,String entertainText,
-                           String medicineText,String restauranText,String birthdayText,
-                           String marketText,String transportText, String jewelleryText,
-                           String otherText,
-                           int clothesM,int cosmeticsM,int entertainM,int medicineM,
-                           int restauranM,int birthdayM,int marketTextM,int transportTextM,
-                           int jewelleryM,int otherM,int date)
+
+    public boolean addData(int date,String clothesText,int clothesM,String cosmeticsText,int cosmeticsM,String medicineText,
+                           int medicineM,String entertainText,int entertainM,String restauranText,int restauranM, String birthdayText,
+                           int birthdayM, String marketText,int marketTextM,String transportText,int transportTextM,String jewelleryText,
+                           int jewelleryM,String otherText, int otherM)
+
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
