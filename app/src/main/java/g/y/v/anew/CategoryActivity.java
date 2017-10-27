@@ -70,24 +70,30 @@ public class CategoryActivity extends AppCompatActivity {
                 if(!insertData==true)
                     Log.d("something","getwrong");
 
-                Cursor data = myDB.getAlldata();
 
-                String gunay="********";
-                if(data.getCount() != 0)
-                {
-                    Log.d("Gunay","----------"+data.getCount());
-                    while(data.moveToNext())
-                    {
-                        gunay=gunay+data.getString(0)+"-----"+data.getString(10)+"-----"+data.getString(11)+"-----"+data.getString(12);
-                    }
-                    Log.d("Gunay",gunay+data.getCount());
-
-                }
             }
         });
 
 
 
+    }
 
+    public  void demo(){
+        Cursor data = myDB.getAlldata();
+
+        String gunay="********";
+        if(data.getCount() != 0)
+        {
+            Log.d("Gunay","--"+data.getCount());
+            while(data.moveToNext())
+            {
+                gunay=data.getString(0)
+                        +data.getString(1)+data.getString(2)+data.getString(3)+
+                        data.getString(4)+data.getString(5)+data.getString(6)+data.getString(7)+
+                        data.getString(8)+data.getString(9)+data.getString(10)+data.getString(11);
+            }
+            Log.d("Gunay",gunay);
+
+        }
     }
 }
