@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     PieChart pieChart;
 
     private float[] yData= {25f, 10f, 15f, 10f, 5f, 15f, 20f};
-    private String[] xData={ "","Jessica" , "Mohammad" , "Kelsey", "Sam", "Robert", "Ashley","Mitch"} ;
+    private String[] xData={ "","Clothes" , "Cosmetics" , "Entertainment", "Medicine", "Restaurants", "Transport","Birthday Gifts"} ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
