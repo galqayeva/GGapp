@@ -62,7 +62,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Calendar c = Calendar.getInstance();
 
                 String sDate = c.get(Calendar.YEAR) + "-"
-                        + c.get(Calendar.MONTH)
+                        + c.get(Calendar.MONTH)+"1"
                         + "-" + c.get(Calendar.DAY_OF_MONTH);
 
                 boolean insertData = myDB.addData(sDate,
@@ -99,7 +99,7 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
 
-
+        demo();
 
     }
     public  int integerParse(String k) {
