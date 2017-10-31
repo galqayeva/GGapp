@@ -67,7 +67,6 @@ public class CategoryActivity extends AppCompatActivity {
                     Log.d("something","getwrong");
 
 
-
                 AlertDialog alertDialog = new AlertDialog.Builder(CategoryActivity.this).create();
                 alertDialog.setTitle("Congrulations");
                 alertDialog.setMessage("Your record is added");
@@ -89,11 +88,11 @@ public class CategoryActivity extends AppCompatActivity {
     }
     public  int integerParse(String k) {
 
-        int a = 0;
-        if (k == "") {
-            a = 0;
+        int a=0 ;
+        if ( k=="" ) {
+            a=Integer.parseInt(k);
         }
-        else a=Integer.parseInt(k);
+
         return a;
     }
 
