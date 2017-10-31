@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
@@ -53,15 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
         pieChart=(PieChart)findViewById(R.id.pieChart);
         pieChart.setRotationEnabled(true);
-        //pieChart.setUsePercentValues(true);
-        // pieChart.setHoleColor(Color.BLUE);
-        //pieChart.setCenterTextColor(Color.BLACK);
         pieChart.setHoleRadius(25f);
         pieChart.setTransparentCircleAlpha(0);
         pieChart.setCenterText("$");
         pieChart.setCenterTextSize(10);
-        // pieChart.setDrawEntryLabels(true);
-        //pieChart.setEntryLabelTextSize(20);
 
         addDataSet();
         pieChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
@@ -114,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
         colors.add(Color.BLUE);
         colors.add(Color.LTGRAY);
         colors.add(Color.CYAN);
-        colors.add(Color.MAGENTA);
-        colors.add(Color.GREEN);
 
         pieDataSet.setColors(colors);
 

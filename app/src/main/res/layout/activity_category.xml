@@ -50,79 +50,19 @@
         android:textSize="18dp"
         android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/twCosmet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/cosmetics"
-        android:layout_below="@+id/twEntert"
-        android:layout_alignLeft="@+id/twEntert"
-        android:layout_alignStart="@+id/twEntert"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/twRest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/restauran"
-        android:layout_below="@+id/twCosmet"
-        android:layout_alignLeft="@+id/twCosmet"
-        android:layout_alignStart="@+id/twCosmet"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/twBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/twRest"
-        android:layout_alignStart="@+id/twRest"
-        android:layout_below="@+id/twRest"
-        android:layout_marginTop="20dp"
-        android:text="@string/birthday"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/twJewellery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/twBirth"
-        android:layout_alignStart="@+id/twBirth"
-        android:layout_below="@+id/twBirth"
-        android:layout_marginTop="20dp"
-        android:text="@string/jewellery"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twMedicine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/twJewellery"
-        android:layout_alignStart="@+id/twJewellery"
-        android:layout_below="@+id/twJewellery"
+        android:layout_below="@+id/twEntert"
+        android:layout_alignLeft="@+id/twEntert"
+        android:layout_alignStart="@+id/twEntert"
         android:layout_marginTop="20dp"
         android:text="@string/medicine"
         android:textSize="18dp"
         android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/twMarket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/market"
-        android:layout_below="@+id/twMedicine"
-        android:layout_alignRight="@+id/twEntert"
-        android:layout_alignEnd="@+id/twEntert"
-        android:layout_alignLeft="@+id/twMedicine"
-        android:layout_alignStart="@+id/twMedicine"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/twOther"
@@ -130,11 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/other"
-        android:layout_below="@+id/twMarket"
-        android:layout_alignLeft="@+id/twMarket"
-        android:layout_alignStart="@+id/twMarket"
-        android:layout_alignRight="@+id/twCloth"
-        android:layout_alignEnd="@+id/twCloth"
+        android:layout_below="@+id/twMedicine"
+        android:layout_alignRight="@+id/twEntert"
+        android:layout_alignEnd="@+id/twEntert"
+        android:layout_alignLeft="@+id/twMedicine"
+        android:layout_alignStart="@+id/twMedicine"
         android:textSize="18dp"
         android:textColor="@color/black"/>
 
@@ -174,53 +114,9 @@
             android:textSize="18dp"
             android:layout_marginTop="6dp"/>
 
-        <EditText
-            android:id="@+id/etCos"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/etRes"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/etBirth"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/etJew"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/etMed"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/etMar"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginTop="6dp"
@@ -277,43 +173,7 @@
             android:inputType="textPersonName"
             android:hint="@string/note"
             android:layout_marginTop="6dp"/>
-        <EditText
-            android:id="@+id/etTcosmetic"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
-        <EditText
-            android:id="@+id/etTrestaurnat"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"
-            />
-        <EditText
-            android:id="@+id/etTbirth"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
-        <EditText
-            android:id="@+id/etTjewelery"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
+
         <EditText
             android:id="@+id/etTmedicin"
             android:layout_width="match_parent"
@@ -323,15 +183,7 @@
             android:inputType="textPersonName"
             android:hint="@string/note"
             android:layout_marginTop="6dp"/>
-        <EditText
-            android:id="@+id/etTmarket"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
+
         <EditText
             android:id="@+id/etTother"
             android:layout_width="match_parent"

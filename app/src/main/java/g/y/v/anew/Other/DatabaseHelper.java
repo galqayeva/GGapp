@@ -13,31 +13,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "ana.db";
-    public static final String TABLE_NAME = "ana";
+    public static final String DATABASE_NAME = "myDb.db";
+    public static final String TABLE_NAME = "myDb";
 
-    public static final String COL1 = "ID";
-    public static final String COL2="date";
-    public static final String COL3="clothesText";
-    public static final String COL4="clothesM";
-    public static final String COL5="cosmeticsText";
-    public static final String COL6="cosmeticsM";
-    public static final String COL7="medicineText";
-    public static final String COL8="medicineM";
-    public static final String COL9="entertainText";
-    public static final String COL10="entertainM";
-    public static final String COL11="restauranText";
-    public static final String COL12="restauranM";
-    public static final String COL13="birthdayText";
-    public static final String COL14="birthdayM";
-    public static final String COL15="marketText";
-    public static final String COL16="marketTextM";
-    public static final String COL17="transportText";
-    public static final String COL18="transportTextM";
-    public static final String COL19="jewelleryText";
-    public static final String COL20="jewelleryM";
-    public static final String COL21="otherText";
-    public static final String COL22="otherM";
+    public static final String COL0 = "ID";
+    public static final String COL1="date";
+    public static final String COL2="clothesText";
+    public static final String COL3="clothesM";
+    public static final String COL4="medicineText";
+    public static final String COL5="medicineM";
+    public static final String COL6="entertainText";
+    public static final String COL7="entertainM";
+    public static final String COL8="transportText";
+    public static final String COL9="transportTextM";
+    public static final String COL10="otherText";
+    public static final String COL11="otherM";
 
 
 
@@ -49,12 +39,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " DATE TEXT, " +
-                COL3+" TEXT, "+COL4+" INTEGER, "+COL5+" TEXT, "+COL6+" INTEGER, "+COL7+" TEXT, "+COL8+" INTEGER, "+
-                COL9+" TEXT, "+COL10+" INTEGER, "+COL11+" TEXT, "+COL12+" INTEGER, "+COL13+" TEXT, "+COL14+" INTEGER, "+
-                COL15+" TEXT, "+COL16+" INTEGER, "+COL17+" TEXT, "+COL18+" INTEGER, "+COL19+" TEXT, "+COL20+" INTEGER, "+
-                COL21+" TEXT, "+COL22+" INTEGER)";
+        String createTable = "CREATE TABLE " + TABLE_NAME + " ("+COL0+" INTEGER PRIMARY KEY AUTOINCREMENT, " +COL1+
+                "  TEXT, " +
+                COL2+" TEXT, "+COL3+" INTEGER, "+COL4+" TEXT, "+COL5+" INTEGER, "+
+                COL6+" TEXT, "+COL7+" INTEGER, "+COL8+" TEXT, "+COL9+" INTEGER, "+
+                COL10+" TEXT, "+COL11+" INTEGER)";
         db.execSQL(createTable);
     }
 
@@ -65,35 +54,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean addData(String  date,String clothesText,int clothesM,String cosmeticsText,int cosmeticsM,String medicineText,
-                           int medicineM,String entertainText,int entertainM,String restauranText,int restauranM, String birthdayText,
-                           int birthdayM, String marketText,int marketTextM,String transportText,int transportTextM,String jewelleryText,
-                           int jewelleryM,String otherText, int otherM)
+    public boolean addData(String  date,String clothesText,int clothesM,String medicineText,
+                           int medicineM,String entertainText,int entertainM,String transportText,int transportTextM,String otherText, int otherM)
 
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL2, date);
-        contentValues.put(COL3, clothesText);
-        contentValues.put(COL4, clothesM);
-        contentValues.put(COL5, cosmeticsText);
-        contentValues.put(COL6, cosmeticsM);
-        contentValues.put(COL7, medicineText);
-        contentValues.put(COL8, medicineM);
-        contentValues.put(COL9, entertainText);
-        contentValues.put(COL10, entertainM);
-        contentValues.put(COL11, restauranText);
-        contentValues.put(COL12, restauranM);
-        contentValues.put(COL13, birthdayText);
-        contentValues.put(COL14, birthdayM);
-        contentValues.put(COL15, marketText);
-        contentValues.put(COL16, marketTextM);
-        contentValues.put(COL17, transportText);
-        contentValues.put(COL18, transportTextM);
-        contentValues.put(COL19, jewelleryText);
-        contentValues.put(COL20, jewelleryM);
-        contentValues.put(COL21, otherText);
-        contentValues.put(COL22, otherM);
+        contentValues.put(COL1, date);
+        contentValues.put(COL2, clothesText);
+        contentValues.put(COL3, clothesM);
+        contentValues.put(COL4, medicineText);
+        contentValues.put(COL5, medicineM);
+        contentValues.put(COL6, entertainText);
+        contentValues.put(COL7, entertainM);
+        contentValues.put(COL8, transportText);
+        contentValues.put(COL9, transportTextM);
+        contentValues.put(COL10, otherText);
+        contentValues.put(COL11, otherM);
 
 
         long result = db.insert(TABLE_NAME, null, contentValues);

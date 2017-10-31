@@ -19,8 +19,8 @@ import g.y.v.anew.Other.DatabaseHelper;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    EditText etClo,etTra,etEnt,etCos,etRes,etBir,etMed,etJew,etMar,etOth;
-    EditText etTClo,etTtra,etTEnt,etTCos,etTRes,etTBir,etTMed,etTJew,etTMar,etTOth;
+    EditText etClo,etTra,etEnt,etMed,etOth;
+    EditText etTClo,etTtra,etTEnt,etTMed,etTOth;
     Button button;
     DatabaseHelper myDB;
 
@@ -35,23 +35,13 @@ public class CategoryActivity extends AppCompatActivity {
         etClo=(EditText)findViewById(R.id.etCloth);
         etTra=(EditText)findViewById(R.id.etTransp);
         etEnt=(EditText)findViewById(R.id.etEntr);
-        etCos=(EditText)findViewById(R.id.etCos);
-        etRes=(EditText)findViewById(R.id.etRes);
-        etBir=(EditText)findViewById(R.id.etBirth);
         etMed=(EditText)findViewById(R.id.etMed);
-        etJew=(EditText)findViewById(R.id.etJew);
-        etMar=(EditText)findViewById(R.id.etMar);
         etOth=(EditText)findViewById(R.id.etOther);
 
         etTClo=(EditText)findViewById(R.id.etTclot);
-        etTtra=(EditText)findViewById(R.id.etTransp);
+        etTtra=(EditText)findViewById(R.id.etTtrans);
         etTEnt=(EditText)findViewById(R.id.etTenter);
-        etTCos=(EditText)findViewById(R.id.etTcosmetic);
-        etTRes=(EditText)findViewById(R.id.etTrestaurnat);
-        etTBir=(EditText)findViewById(R.id.etTbirth);
         etTMed=(EditText)findViewById(R.id.etTmedicin);
-        etTJew=(EditText)findViewById(R.id.etTjewelery);
-        etTMar=(EditText)findViewById(R.id.etTmarket);
         etTOth=(EditText)findViewById(R.id.etTother);
 
         button=(Button)findViewById(R.id.button);
@@ -62,19 +52,14 @@ public class CategoryActivity extends AppCompatActivity {
                 Calendar c = Calendar.getInstance();
 
                 String sDate = c.get(Calendar.YEAR) + "-"
-                        + c.get(Calendar.MONTH)+"1"
+                        + (c.get(Calendar.MONTH)+1)
                         + "-" + c.get(Calendar.DAY_OF_MONTH);
 
                 boolean insertData = myDB.addData(sDate,
                         etTClo.getText().toString(),integerParse(etClo.getText().toString()),
-                        etTCos.getText().toString(),integerParse(etCos.getText().toString()),
                         etTMed.getText().toString(),integerParse(etMed.getText().toString()),
                         etTEnt.getText().toString(),integerParse(etEnt.getText().toString()),
-                        etTRes.getText().toString(),integerParse(etRes.getText().toString()),
-                        etTBir.getText().toString(),integerParse(etBir.getText().toString()),
-                        etTMar.getText().toString(),integerParse(etMar.getText().toString()),
                         etTtra.getText().toString(),integerParse(etTra.getText().toString()),
-                        etTJew.getText().toString(),integerParse(etJew.getText().toString()),
                         etTOth.getText().toString(),integerParse(etOth.getText().toString())
 
                 );
@@ -108,6 +93,7 @@ public class CategoryActivity extends AppCompatActivity {
         if (k == "") {
             a = 0;
         }
+        else a=Integer.parseInt(k);
         return a;
     }
 
@@ -122,8 +108,8 @@ public class CategoryActivity extends AppCompatActivity {
             {
                 gunay=data.getString(0)
                         +data.getString(1)+data.getString(2)+data.getString(3)+
-                        data.getString(4)+data.getString(5)+data.getString(6)+data.getString(7)+
-                        data.getString(8)+data.getString(9)+data.getString(10)+data.getString(11);
+                        data.getString(4)+data.getString(5)+data.getString(6)+data.getString(7)+"---"+
+                        data.getString(8)+data.getString(9)+"--"+data.getString(10)+data.getString(11);
             }
             Log.d("Gunay",gunay);
 
