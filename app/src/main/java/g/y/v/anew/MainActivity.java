@@ -115,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
         pieDataSet.setValueTextSize(12);
 
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.WHITE);
+        colors.add(Color.MAGENTA);
         colors.add(Color.YELLOW);
-        colors.add(Color.BLUE);
-        colors.add(Color.LTGRAY);
-        colors.add(Color.CYAN);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
+        colors.add(Color.WHITE);
 
         pieDataSet.setColors(colors);
 
