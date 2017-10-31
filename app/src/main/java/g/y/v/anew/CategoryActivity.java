@@ -44,23 +44,40 @@ public class CategoryActivity extends AppCompatActivity {
         etTMed=(EditText)findViewById(R.id.etTmedicin);
         etTOth=(EditText)findViewById(R.id.etTother);
 
+
         button=(Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Calendar c = Calendar.getInstance();
-
                 String sDate = c.get(Calendar.YEAR) + "-"
                         + (c.get(Calendar.MONTH)+1)
                         + "-" + c.get(Calendar.DAY_OF_MONTH);
 
+                if(etClo.getText().toString().equals("")){
+                    etClo.setText("0");
+                }
+                if(etTra.getText().toString().equals("")){
+                    etTra.setText("0");
+                }
+                if(etEnt.getText().toString().equals("")){
+                    etEnt.setText("0");
+                }
+                if(etMed.getText().toString().equals("")){
+                    etMed.setText("0");
+                }
+                if(etOth.getText().toString().equals("")){
+                    etOth.setText("0");
+                }
+
+
                 boolean insertData = myDB.addData(sDate,
-                        etTClo.getText().toString(),integerParse(etClo.getText().toString()),
-                        etTMed.getText().toString(),integerParse(etMed.getText().toString()),
-                        etTEnt.getText().toString(),integerParse(etEnt.getText().toString()),
-                        etTtra.getText().toString(),integerParse(etTra.getText().toString()),
-                        etTOth.getText().toString(),integerParse(etOth.getText().toString())
+                        etTClo.getText().toString(),Integer.parseInt(etClo.getText().toString()),
+                        etTMed.getText().toString(),Integer.parseInt(etMed.getText().toString()),
+                        etTEnt.getText().toString(),Integer.parseInt(etEnt.getText().toString()),
+                        etTtra.getText().toString(),Integer.parseInt(etTra.getText().toString()),
+                        etTOth.getText().toString(),Integer.parseInt(etOth.getText().toString())
 
                 );
                 if(!insertData==true)
@@ -89,7 +106,7 @@ public class CategoryActivity extends AppCompatActivity {
     public  int integerParse(String k) {
 
         int a=0 ;
-        if ( k=="" ) {
+        if ( k!="" ) {
             a=Integer.parseInt(k);
         }
 
@@ -97,18 +114,15 @@ public class CategoryActivity extends AppCompatActivity {
     }
 
     public  void demo(){
-        Cursor data = myDB.getAlldata();
 
-        String gunay="********";
+        Cursor data = myDB.getListContents("clothesM");
+
+        String gunay = "";
         if(data.getCount() != 0)
         {
-            Log.d("Gunay","--"+data.getCount());
             while(data.moveToNext())
             {
-                gunay=data.getString(0)
-                        +data.getString(1)+data.getString(2)+data.getString(3)+
-                        data.getString(4)+data.getString(5)+data.getString(6)+data.getString(7)+"---"+
-                        data.getString(8)+data.getString(9)+"--"+data.getString(10)+data.getString(11);
+                gunay=gunay+ "--"+data.getString(0)+"--";
             }
             Log.d("Gunay",gunay);
 

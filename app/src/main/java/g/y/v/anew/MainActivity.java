@@ -1,10 +1,12 @@
 package g.y.v.anew;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import g.y.v.anew.Models.CategoryModel;
+import g.y.v.anew.Other.DatabaseHelper;
 import g.y.v.anew.Other.MyAdapter;
 
 
@@ -31,14 +34,17 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rV1;
     Button btn;
     PieChart pieChart;
+    DatabaseHelper myDB;
 
-    private float[] yData= {25f, 10f, 15f, 10f, 5f, 15f, 20f};
-    private String[] xData={ "","Clothes" , "Cosmetics" , "Entertainment", "Medicine", "Restaurants", "Transport","Birthday Gifts"} ;
+    private float[] yData=new float[5];
+    private String[] xData={ "","Clothes" , "medicine" , "Entertainment", "Transport", "other"} ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        myDB = new DatabaseHelper(getApplicationContext());
 
         btn=(Button)findViewById(R.id.buttonAdd);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        yData[0]=demo("clothesM");
+        yData[1]=demo("medicineM");
+        yData[2]=demo("entertainM");
+        yData[3]=demo("transportTextM");
+        yData[4]=demo("otherM");
 
 
         pieChart=(PieChart)findViewById(R.id.pieChart);
@@ -119,7 +131,24 @@ public class MainActivity extends AppCompatActivity {
         pieChart.setData(pieData);
         pieChart.invalidate();
 
+    }
 
+    public Float  demo(String content){
 
+        Cursor data = myDB.getListContents(content);
+
+        String gunay = "";
+        if(data.getCount() != 0)
+        {
+            while(data.moveToNext())
+            {
+                gunay=data.getString(0);
+
+            }
+            Log.d("Gunay",gunay);
+
+        }
+
+        return Float.parseFloat(gunay);
     }
 }

@@ -1,4 +1,4 @@
-package g.y.v.anew;
+package g.y.v.anew.Models;
 
 /**
  * Created by telim2 on 30.10.2017.

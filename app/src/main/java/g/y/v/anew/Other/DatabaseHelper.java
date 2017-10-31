@@ -83,9 +83,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Cursor getListContents(String day){
+    public Cursor getListContents(String money){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME +" WHERE DAY="+day, null);
+        Cursor data = db.rawQuery("SELECT  sum("+money+ ") FROM " + TABLE_NAME , null);
         return data;
     }
 
