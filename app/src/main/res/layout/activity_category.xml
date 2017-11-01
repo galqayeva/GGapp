@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="g.y.v.anew.CategoryActivity"
-    android:background="@color/colorAccent">
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/twAdd"
@@ -31,7 +31,7 @@
         android:id="@+id/twTransport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Transport"
         android:textSize="18dp"
         android:textColor="@color/white"
