@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -19,6 +20,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     PieChart pieChart;
     DatabaseHelper myDB;
+    TextView last7,last1,lastMonth;
 
     private float[] yData=new float[5];
     private String[] xData={ "","Clothes" , "medicine" , "Entertainment", "Transport", "other"} ;
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myDB = new DatabaseHelper(getApplicationContext());
+        myDB.addData("0","0",0,"0",0,"0",0,"0",0,"0",0);
 
         btn=(Button)findViewById(R.id.buttonAdd);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        last1=(TextView)findViewById(R.id.textView3) ;
+        last7=(TextView)findViewById(R.id.textView4) ;
+        lastMonth=(TextView)findViewById(R.id.textView5) ;
+
+        last1.setText("Last day Spending "+getSpend("1")+" $");
+        last7.setText("Last week Spending "+getSpend("7")+" $");
+        lastMonth.setText("Last month Spending "+getSpend("30")+" $");
+
+        getSpend("0");
 
         yData[0]=demo("clothesM");
         yData[1]=demo("medicineM");
@@ -137,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
         Cursor data = myDB.getListContents(content);
 
-        String gunay = "";
+        String gunay = "0";
         if(data.getCount() != 0)
         {
             while(data.moveToNext())
@@ -148,7 +163,26 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Gunay",gunay);
 
         }
+        else
+            gunay="10";
 
         return Float.parseFloat(gunay);
+    }
+
+    public String  getSpend(String day){
+
+        Cursor data = myDB.getLimitedData(day);
+        String a = "0";
+        if(data.getCount() != 0)
+        {
+            while(data.moveToNext())
+            {
+                a=data.getString(0);
+            }
+            Log.d("son7",a+"**"+data.getCount());
+
+        }
+
+        return a;
     }
 }

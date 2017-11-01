@@ -13,8 +13,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "myDb.db";
-    public static final String TABLE_NAME = "myDb";
+    public static final String DATABASE_NAME = "BdgtDb.db";
+    public static final String TABLE_NAME = "BdgtDb";
 
     public static final String COL0 = "ID";
     public static final String COL1="date";
@@ -89,6 +89,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
+    public Cursor getLimitedData( String limit){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT "+
+                "  (  SUM(clothesM) + SUM(medicineM) + SUM(entertainM) + SUM(transportTextM) + SUM(otherM) )  from" + " (SELECT * FROM " +TABLE_NAME +" order by id DESC limit "+limit+" )", null);
+        return data;
+    }
     public Cursor getAlldata(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME , null);
