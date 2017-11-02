@@ -7,207 +7,220 @@
     tools:context="g.y.v.anew.CategoryActivity"
     android:background="@color/background">
 
-    <TextView
-        android:id="@+id/twAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/addSpending"
-        android:textSize="30dp"
-        android:textColor="@color/white"/>
-
-    <TextView
-        android:id="@+id/twCloth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/clothes"
-        android:textSize="18dp"
-        android:textColor="@color/white"/>
-
-    <TextView
-        android:id="@+id/twTransport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Transport"
-        android:textSize="18dp"
-        android:textColor="@color/white"
-        android:layout_below="@+id/twCloth"
-        android:layout_alignLeft="@+id/twCloth"
-        android:layout_alignStart="@+id/twCloth" />
-
-    <TextView
-        android:id="@+id/twEntert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/twTransport"
-        android:layout_alignStart="@+id/twTransport"
-        android:layout_below="@+id/twTransport"
-        android:layout_marginTop="20dp"
-        android:text="@string/entertain"
-        android:textSize="18dp"
-        android:textColor="@color/white"/>
-
-
-    <TextView
-        android:id="@+id/twMedicine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/medicine"
-        android:textSize="18dp"
-        android:textColor="@color/white"
-        android:layout_below="@+id/twEntert"
-        android:layout_alignLeft="@+id/twEntert"
-        android:layout_alignStart="@+id/twEntert" />
-
-
-    <TextView
-        android:id="@+id/twOther"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/other"
-        android:layout_below="@+id/twMedicine"
-        android:layout_alignRight="@+id/twEntert"
-        android:layout_alignEnd="@+id/twEntert"
-        android:layout_alignLeft="@+id/twMedicine"
-        android:layout_alignStart="@+id/twMedicine"
-        android:textSize="18dp"
-        android:textColor="@color/white"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="92dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="14dp"
-        android:layout_toEndOf="@+id/twEntert"
-        android:layout_toRightOf="@+id/twEntert"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
-
-        <EditText
-            android:id="@+id/etCloth"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"/>
-
-        <EditText
-            android:id="@+id/etTransp"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"/>
-
-        <EditText
-            android:id="@+id/etEntr"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
-
-
-        <EditText
-            android:id="@+id/etMed"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/etOther"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="18dp"
-            android:layout_marginTop="6dp"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignTop="@+id/linearLayout"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:layout_toEndOf="@+id/linearLayout"
-        android:layout_toRightOf="@+id/linearLayout"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/primary">
+    </android.support.v7.widget.Toolbar>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignRight="@id/toolbar"
+       android:layout_below="@id/toolbar"
+       android:layout_alignLeft="@id/toolbar">
+       <TextView
+           android:id="@+id/twAdd"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="20dp"
+           android:text="@string/addSpending"
+           android:textSize="30dp"
+           android:textColor="@color/white"/>
 
-        <EditText
-            android:id="@+id/etTclot"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"/>
+       <TextView
+           android:id="@+id/twCloth"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="100dp"
+           android:text="@string/clothes"
+           android:textSize="18dp"
+           android:textColor="@color/white"/>
 
-        <EditText
-            android:id="@+id/etTtrans"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:hint="@string/note"
-            android:inputType="textPersonName"
-            android:textSize="18dp"/>
+       <TextView
+           android:id="@+id/twTransport"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="Transport"
+           android:textSize="18dp"
+           android:textColor="@color/white"
+           android:layout_below="@+id/twCloth"
+           android:layout_alignLeft="@+id/twCloth"
+           android:layout_alignStart="@+id/twCloth" />
 
-        <EditText
-            android:id="@+id/etTenter"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
+       <TextView
+           android:id="@+id/twEntert"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/twTransport"
+           android:layout_alignStart="@+id/twTransport"
+           android:layout_below="@+id/twTransport"
+           android:layout_marginTop="20dp"
+           android:text="@string/entertain"
+           android:textSize="18dp"
+           android:textColor="@color/white"/>
 
-        <EditText
-            android:id="@+id/etTmedicin"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
 
-        <EditText
-            android:id="@+id/etTother"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:textSize="18dp"
-            android:inputType="textPersonName"
-            android:hint="@string/note"
-            android:layout_marginTop="6dp"/>
+       <TextView
+           android:id="@+id/twMedicine"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="25dp"
+           android:text="@string/medicine"
+           android:textSize="18dp"
+           android:textColor="@color/white"
+           android:layout_below="@+id/twEntert"
+           android:layout_alignLeft="@+id/twEntert"
+           android:layout_alignStart="@+id/twEntert" />
 
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/twAdd"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:text="add"
-        android:background="@color/colorPrimary"/>
+       <TextView
+           android:id="@+id/twOther"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="@string/other"
+           android:layout_below="@+id/twMedicine"
+           android:layout_alignRight="@+id/twEntert"
+           android:layout_alignEnd="@+id/twEntert"
+           android:layout_alignLeft="@+id/twMedicine"
+           android:layout_alignStart="@+id/twMedicine"
+           android:textSize="18dp"
+           android:textColor="@color/white"/>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginTop="92dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginStart="14dp"
+           android:layout_toEndOf="@+id/twEntert"
+           android:layout_toRightOf="@+id/twEntert"
+           android:orientation="vertical"
+           android:id="@+id/linearLayout">
+
+           <EditText
+               android:id="@+id/etCloth"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:inputType="number"
+               android:textSize="18dp"/>
+
+           <EditText
+               android:id="@+id/etTransp"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:inputType="number"
+               android:textSize="18dp"/>
+
+           <EditText
+               android:id="@+id/etEntr"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:inputType="number"
+               android:textSize="18dp"
+               android:layout_marginTop="6dp"/>
+
+
+           <EditText
+               android:id="@+id/etMed"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:layout_marginTop="6dp"
+               android:ems="10"
+               android:inputType="number"
+               android:textSize="18dp" />
+
+           <EditText
+               android:id="@+id/etOther"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:inputType="number"
+               android:textSize="18dp"
+               android:layout_marginTop="6dp"/>
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignTop="@+id/linearLayout"
+           android:layout_marginLeft="19dp"
+           android:layout_marginStart="19dp"
+           android:layout_toEndOf="@+id/linearLayout"
+           android:layout_toRightOf="@+id/linearLayout"
+           android:orientation="vertical">
+
+           <EditText
+               android:id="@+id/etTclot"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:textSize="18dp"
+               android:inputType="textPersonName"
+               android:hint="@string/note"/>
+
+           <EditText
+               android:id="@+id/etTtrans"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:hint="@string/note"
+               android:inputType="textPersonName"
+               android:textSize="18dp"/>
+
+           <EditText
+               android:id="@+id/etTenter"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:textSize="18dp"
+               android:inputType="textPersonName"
+               android:hint="@string/note"
+               android:layout_marginTop="6dp"/>
+
+           <EditText
+               android:id="@+id/etTmedicin"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:textSize="18dp"
+               android:inputType="textPersonName"
+               android:hint="@string/note"
+               android:layout_marginTop="6dp"/>
+
+           <EditText
+               android:id="@+id/etTother"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:ems="10"
+               android:textSize="18dp"
+               android:inputType="textPersonName"
+               android:hint="@string/note"
+               android:layout_marginTop="6dp"/>
+
+       </LinearLayout>
+
+       <Button
+           android:id="@+id/button"
+           android:layout_width="80dp"
+           android:layout_height="40dp"
+           android:layout_alignBottom="@+id/twAdd"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginEnd="12dp"
+           android:layout_marginRight="12dp"
+           android:text="add"
+           android:background="@color/colorPrimary"/>
+   </RelativeLayout>
 
 
 </RelativeLayout>

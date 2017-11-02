@@ -31,7 +31,7 @@ import g.y.v.anew.Other.DatabaseHelper;
 import g.y.v.anew.Other.MyAdapter;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity{
 
     Button btn;
     PieChart pieChart;
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolBarInitialize(R.id.toolbar);
+        setTitle("My Budget Planner");
 
         last1=(TextView)findViewById(R.id.textView3);
         last7=(TextView)findViewById(R.id.textView4);

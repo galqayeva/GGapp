@@ -14,7 +14,7 @@ import g.y.v.anew.Other.DatabaseHelper;
 import g.y.v.anew.Other.Methd;
 
 
-public class CategoryActivity extends AppCompatActivity {
+public class CategoryActivity extends BaseActivity {
 
     EditText etClo,etTra,etEnt,etMed,etOth;
     EditText etTClo,etTtra,etTEnt,etTMed,etTOth;
@@ -25,6 +25,8 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+        toolBarInitialize(R.id.toolbar);
+        setTitle("My Budget Planner");
 
         myDB = new DatabaseHelper(getApplicationContext());
 
