@@ -2,7 +2,6 @@ package g.y.v.anew;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,11 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import java.util.Calendar;
-
 import g.y.v.anew.Other.DatabaseHelper;
+import g.y.v.anew.Other.Methd;
 
 
 public class CategoryActivity extends AppCompatActivity {
@@ -28,7 +25,6 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
-
 
         myDB = new DatabaseHelper(getApplicationContext());
 
@@ -44,16 +40,13 @@ public class CategoryActivity extends AppCompatActivity {
         etTMed=(EditText)findViewById(R.id.etTmedicin);
         etTOth=(EditText)findViewById(R.id.etTother);
 
-
         button=(Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Calendar c = Calendar.getInstance();
-                String sDate = c.get(Calendar.YEAR) + "-"
-                        + (c.get(Calendar.MONTH)+1)
-                        + "-" + c.get(Calendar.DAY_OF_MONTH);
+                Methd methd=new Methd();
+                String sDate=methd.getDate();
 
                 if(etClo.getText().toString().equals("")){
                     etClo.setText("0");
@@ -100,23 +93,7 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
 
-        demo();
 
     }
 
-    public  void demo(){
-
-        Cursor data = myDB.getListContents("clothesM");
-
-        String gunay = "";
-        if(data.getCount() != 0)
-        {
-            while(data.moveToNext())
-            {
-                gunay=gunay+ "--"+data.getString(0)+"--";
-            }
-            Log.d("Gunay",gunay);
-
-        }
-    }
 }
