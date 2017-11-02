@@ -148,25 +148,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public Float  demo(String content){
+    public float demo(String content){
 
         Cursor data = myDB.getListContents(content);
-
-        String gunay = "0";
+        String k = "0";
         if(data.getCount() != 0)
         {
             while(data.moveToNext())
             {
-                gunay=data.getString(0);
-
+                k=data.getString(0);
             }
-            Log.d("Gunay",gunay);
-
         }
         else
-            gunay="10";
-
-        return Float.parseFloat(gunay);
+            k="10";
+        return Float.parseFloat(k);
     }
 
     public String  getSpend(String day){
@@ -179,10 +174,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 a=data.getString(0);
             }
-            Log.d("son7",a+"**"+data.getCount());
-
         }
-
         return a;
     }
 }
