@@ -32,9 +32,7 @@ import g.y.v.anew.Other.MyAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
-    private List<CategoryModel> modelList1;
-    private RecyclerView.Adapter adapter1;
-    RecyclerView rV1;
+
     Button btn;
     PieChart pieChart;
     DatabaseHelper myDB;
@@ -48,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        last1=(TextView)findViewById(R.id.textView3);
+        last7=(TextView)findViewById(R.id.textView4);
+        lastMonth=(TextView)findViewById(R.id.textView5);
+        pieChart=(PieChart)findViewById(R.id.pieChart);
+
         myDB = new DatabaseHelper(getApplicationContext());
         myDB.addData("0","0",0,"0",0,"0",0,"0",0,"0",0);
 
@@ -60,15 +63,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        last1=(TextView)findViewById(R.id.textView3) ;
-        last7=(TextView)findViewById(R.id.textView4) ;
-        lastMonth=(TextView)findViewById(R.id.textView5) ;
-
-        last1.setText("Last day Spending "+getSpend("1")+" $");
+        last1.setText("Last day Spending "+getSpend("2")+" $");
         last7.setText("Last week Spending "+getSpend("7")+" $");
         lastMonth.setText("Last month Spending "+getSpend("30")+" $");
-
-        getSpend("0");
 
         yData[0]=demo("clothesM");
         yData[1]=demo("medicineM");
@@ -76,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
         yData[3]=demo("transportTextM");
         yData[4]=demo("otherM");
 
-
-        pieChart=(PieChart)findViewById(R.id.pieChart);
         pieChart.setRotationEnabled(true);
         pieChart.setHoleRadius(25f);
         pieChart.setTransparentCircleAlpha(0);
@@ -98,22 +93,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                 }
-                String employee = xData[pos1 + 1];
-                Toast.makeText(MainActivity.this, "You spend " +sales + "$ \n" + "on " + employee, Toast.LENGTH_LONG).show();
-
+                String type = xData[pos1 + 1];
+                Toast.makeText(MainActivity.this, "You spend " +sales + "$ \n" + "on " + type, Toast.LENGTH_LONG).show();
             }
-
             @Override
-            public void onNothingSelected() {
-
-            }
+            public void onNothingSelected() {}
         });
-
-
     }
 
     private void addDataSet() {
-
 
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         ArrayList<String> xEntrys = new ArrayList<>();
@@ -125,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i < xData.length; i++){
             xEntrys.add(xData[i]);
         }
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Speding");
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Spending");
         pieDataSet.setSliceSpace(2);
         pieDataSet.setValueTextSize(12);
 
@@ -145,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieChart.invalidate();
-
     }
 
     public float demo(String content){
