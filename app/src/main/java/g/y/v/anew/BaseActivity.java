@@ -45,8 +45,8 @@ public abstract class BaseActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
 
         PrimaryDrawerItem item0 = new PrimaryDrawerItem().withIdentifier(1).withName("Home Page");
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(2).withName("My Bets");
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(3).withName("Bet Coin");
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(2).withName("My Spendings");
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(3).withName("Add Spendings");
         PrimaryDrawerItem item3=  new PrimaryDrawerItem().withIdentifier(4).withName("Log Out");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -71,6 +71,14 @@ public abstract class BaseActivity extends ActionBarActivity {
                             case 1:
                                 Intent intent0=new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent0);
+                                break;
+                            case 2:
+                                Intent intent1=new Intent(getApplicationContext(),SpendinglistActivity.class);
+                                startActivity(intent1);
+                                break;
+                            case 3:
+                                Intent intent2=new Intent(getApplicationContext(),CategoryActivity.class);
+                                startActivity(intent2);
                                 break;
 
 
