@@ -103,15 +103,6 @@ public class CategoryActivity extends AppCompatActivity {
         demo();
 
     }
-    public  int integerParse(String k) {
-
-        int a=0 ;
-        if ( k!="" ) {
-            a=Integer.parseInt(k);
-        }
-
-        return a;
-    }
 
     public  void demo(){
 
