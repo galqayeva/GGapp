@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@id/toolbar"
         android:layout_below="@id/toolbar"
-        android:layout_alignLeft="@id/toolbar">
+        android:layout_alignLeft="@id/toolbar"
+        android:background="@color/background">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycleview"
