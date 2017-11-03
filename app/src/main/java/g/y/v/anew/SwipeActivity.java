@@ -72,24 +72,25 @@ public class SwipeActivity extends BaseActivity {
             }
         };
 
+
         listView.setMenuCreator(creator);
 
         listView.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
+
+
                     case 0:
                         Intent intent = new Intent(SwipeActivity.this, CategoryActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
                         myDB.deleteId(position);
-//                        Intent intent2 = new Intent(SwipeActivity.this, SwipeActivity.class);
-//                        startActivity(intent2);
                         adapter.clear();
                         list.clear();
                         loadList();
-                        Log.d("gunay","a-"+position);
+                       // Log.d("gunay","a-"+adapter.getItem(0));
                         break;
                 }
                 return false;
