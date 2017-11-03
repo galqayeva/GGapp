@@ -2,6 +2,7 @@ package g.y.v.anew;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import java.util.List;
 
 import g.y.v.anew.Models.CategoryModel;
 import g.y.v.anew.Other.DatabaseHelper;
+import g.y.v.anew.Other.Methd;
 import g.y.v.anew.Other.MyAdapter;
 
 
@@ -54,7 +56,12 @@ public class MainActivity extends BaseActivity{
         pieChart=(PieChart)findViewById(R.id.pieChart);
 
         myDB = new DatabaseHelper(getApplicationContext());
-        myDB.addData("0","0",0,"0",0,"0",0,"0",0,"0",0);
+        Methd methd=new Methd();
+        String sDate=methd.getDate();
+        myDB.addData(sDate,"0",0,"0",0,"0",0,"0",0,"0",0);
+
+
+
 
         btn=(Button)findViewById(R.id.buttonAdd);
         btn.setOnClickListener(new View.OnClickListener() {

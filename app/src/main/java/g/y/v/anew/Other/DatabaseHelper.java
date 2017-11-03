@@ -9,12 +9,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "Gunay.db";
-    public static final String TABLE_NAME = "Gunay";
+    public static final String DATABASE_NAME = "mmym.db";
+    public static final String TABLE_NAME = "mmym";
 
     public static final String COL0 = "ID";
     public static final String COL1="date";
@@ -106,6 +107,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteAll(){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME ;
+        db.execSQL(query);
+    }
+
+    public void deleteId(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE_NAME +" WHERE ID="+id;
         db.execSQL(query);
     }
 }

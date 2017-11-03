@@ -21,7 +21,8 @@
         <activity
             android:name=".CategoryActivity"
             android:screenOrientation="locked" />
-        <activity android:name=".SpendinglistActivity"></activity>
+        <activity android:name=".SpendinglistActivity" />
+        <activity android:name=".SwipeActivity"></activity>
     </application>
 
 </manifest>

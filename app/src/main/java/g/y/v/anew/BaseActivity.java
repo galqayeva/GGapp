@@ -20,7 +20,6 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import g.y.v.anew.R;
 
 
 public abstract class BaseActivity extends ActionBarActivity {
@@ -73,13 +72,14 @@ public abstract class BaseActivity extends ActionBarActivity {
                                 startActivity(intent0);
                                 break;
                             case 2:
-                                Intent intent1=new Intent(getApplicationContext(),SpendinglistActivity.class);
+                                Intent intent1=new Intent(getApplicationContext(),SwipeActivity.class);
                                 startActivity(intent1);
                                 break;
                             case 3:
                                 Intent intent2=new Intent(getApplicationContext(),CategoryActivity.class);
                                 startActivity(intent2);
                                 break;
+
 
 
                         }
